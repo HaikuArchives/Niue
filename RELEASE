@@ -1,0 +1,5 @@
+- rebuild all source
+- rebuild resources
+- rezip docs, skeleton
+- check if tokens are ok.
+- check if version is updated in About, Version-Check, appsig, saveprefs

@@ -1,0 +1,66 @@
+Niue Documentation
+
+
+	SHORTCUTS
+
+
+Here's an overview of the most common shortcuts:
+
+	FILE:
+
+ctrl-N			New Window
+ctrl-shift-N		New Project
+ctrl-O			Open Project
+ctrl-B			Browse Projects
+
+ctrl-S			Save
+ctrl-shift-S		Save-As
+
+
+	EDIT:
+
+ctrl-Z			Undo
+ctrl-X			Cut
+ctrl-C			Copy
+ctrl-V			Paste
+
+ctrl-A			Select All
+ctrl-shift-A		Deselect All
+
+ctrl-]			Indent
+ctrl-[			Undent
+ctrl-shift-[		Quote
+ctrl-shift-]		Unquote
+
+
+	SEARCH:
+
+ctrl-shift-F		Search Multiple Docs
+
+ctrl-F			Find
+ctrl-G			Find Forward
+ctrl-D			Find Backward
+ctrl-H			Find Selection
+ctrl-J			Replace Selection
+
+ctrl-,			Go To Line
+
+
+	PROJECT:
+
+ctrl-T			Add Files To Project
+ctrl-Y			Build Rules
+
+ctrl-M		Make
+ctrl-U			Make Clean
+ctrl-R			Run
+
+ctrl-shift-E		Make Backup
+ctrl-shift-E		Export App		
+		
+
+	VIEW:
+
+ctrl-9			Switch File Up
+ctrl-0			Switch File Down
+

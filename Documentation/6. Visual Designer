@@ -1,0 +1,18 @@
+Niue Documentation
+
+
+	VISUAL DESIGNER
+
+
+Niue Visual Designer is a tool to help you with the layout of controls.
+Usage should be pretty straightforward, select a control from the right, click on the grid to add and an
+use the input fields on the left to fine tune the control. Additionally you can align all the dropped
+elements and use the (square-red) handles to move and resize controls. 
+By clicking the 'Generate Code'  button Niue will write some lines of code for you to use in 
+your project.
+
+To start a new project with the layout you've created, choose 'Start Project'. A new project will be 
+created with the chosen element in the main view.
+
+Only the most common controls are available right now, more will be added later. In the distant future 
+the Visual Designer will also be able to load designs from code and interact with Niue. 

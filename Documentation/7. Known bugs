@@ -1,0 +1,19 @@
+Niue Documentation
+
+
+	KNOWN BUGS
+
+
+Niue sometimes has trouble with linebreaks in files
+	
+	To fix this, close Niue, open the file(s) that cause trouble with Pe,
+	go to File->FileOptions and set 'Linebreaks' to Be/Unix.
+
+Files are marked as 'unsaved' when you open a project
+
+	Select the file(s).
+
+Haiku: Mousewheel scrolling doesn't work
+
+	No solution yet, this will be fixed after Haiku R1-alpha
+

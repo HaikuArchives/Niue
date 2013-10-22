@@ -1,0 +1,17 @@
+- Extend visual designer (more elements)
+- Haiku layout-management in VD
+- Undo in VD
+- Remember last active project
+- ), ] & } helpers (like in PE)
+- Improve Search 'n' Replace
+- Save all changes on Make/Make-Run
+- Stricter Coding style in automated files  
+- Open existing code in Visual Designer
+- app-Uploader
+- Auto-save?
+- Remove makefile-dependancy? (more or less done, rethink makefile handling)
+- Improve prefs handling
+- Backup-file with date
+- Test on Haiku
+- Stress test all elements/options/possible quarks
+- Review all documentation

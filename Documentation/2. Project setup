@@ -1,0 +1,36 @@
+Niue Documentation
+
+
+	PROJECT SETUP
+
+
+A Niue project isn't really a project. It's simply a folder containing a bunch of sourcecode files, a 
+makefile and maybe some resources. Projects are opened by selecting their folder from File->Open 
+Project'. 
+
+There is also another, more exotic, way of opening projects. Instead op choosing File->Open Project, 
+you can also go for File->Browse Projects. Now Niue finds all folders containing a makefile in the 
+location you provide. Be careful though, there is no guarantee that these are all projects. It's up to 
+you to decide if the results are what you are looking for.
+
+To add files to your project choose Project->Add Files To Project. All files you select are copied from 
+their original location to your project folder. To remove a file from your project to right-click it and 
+select 'Remove from project'. The file is moved from your project folder to Trash so it's easy to 
+recover mistakes. 
+
+Besides removing files there is more you can do to a file with a right-click. Most options will speak for 
+itself but there one that deserves some explanation. Sometimes it might happen that a file is sorted 
+under Resources while you know that it is actually sourcecode. When this happens you can choose 
+'Mark as source' to, well, mark it as source.
+
+While you are working on a project it is also up to you to keep your makefile up to date. By choosing 
+Make, Make Clean or Run you tell Niue to make your project by the makefile's rules. Note that 
+because of that files that added to your project are not automatically included in your build. To make
+your life easier there's also an option to define the 'Build Rules', (Project->Build Rules). Fill out he form
+and Niue will create a new makefile for you.
+
+	Tip: Use Ctrl-9 and Ctrl-0 to easily switch between files!
+
+To help you keeping track of your actions, Niue displays files that are unsaved in red. Make sure to
+save your changes before you build your project.
+

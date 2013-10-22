@@ -1,0 +1,13 @@
+Niue Documentation
+
+
+	EXPORTING
+
+
+When you have a project open you can choose Project->Export Application to create a distribution of 
+your application. You are asked for a name for the executable binary an optionally you can add a SVG 
+icon or additional files. Hitting the Export button will ask your where to save your distro and creates a 
+zip-file containing the executable binary, with the SVG if provided, and the additional files if provided.
+
+Usually you'll want to upload this zip-file and make it available for download.
+

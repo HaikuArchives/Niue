@@ -1,0 +1,13 @@
+Niue Documentation
+
+
+	CODE COMPLETION
+
+
+As of version four Niue tries to help you writing code by suggesting possible function names, 
+constants and c++ keywords. Whenever you are typing a string that Niue recognizes a list of 
+hints appears in the bottom-right corner. To access this list press F12 on your keyboard, 
+use your mouse or the up and down arrows to navigate the list. Pressing enter replaces your 
+typing with the selected hint.
+
+If this 'code-completion' is annoying you, choose 'View->Code Completion' to turn it off.

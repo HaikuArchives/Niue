@@ -1,0 +1,29 @@
+Niue Documentation
+
+
+	ABOUT NIUE
+
+
+Welcome to Niue!
+Niue is a basic, easy to use but powerful development environment. Or, Niue is an application 
+for BeOS/Haiku which makes it easy to develop applications for BeOS/Haiku. It comes with a 
+syntax styled code editor and handy features to build and export your projects. Besides that Niue 
+has a very cool way to find development projects on your system. Read the documentation to find 
+out how to use Niue.
+
+Niue wouldn't have been possible without the freely available sourcecode of the following projects:
+
+	Yate, by Chris Blackbourne,
+	EZLauncher, by Robert Polic,
+	File-To-Resource, by Gabriele Biffi,
+	The Mover class, by Sylvian Tertois,
+	The IconMenu class, by Rene Gollent,
+	The BarberPole class, by Micheal Pfeiffer,
+
+And everyone working on, or supporting Haiku. Because Niue owes so much to those above I want
+to be sure that future developers can always rely on the codebase of Niue and therefor the Niue 
+sources are always available by request.
+
+Niue is developed by: Tako Lansbergen (a.ka. 0033)
+Feedback goes to: takolansbergen@gmail.com, or bebits.com talkback
+

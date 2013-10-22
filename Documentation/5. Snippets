@@ -1,0 +1,17 @@
+Niue Documentation
+
+
+	SNIPPETS
+
+
+Niue snippets will be familiar for those who have used Microsoft Visual Studio and they work pretty 
+much the same. Right-click anywhere in the sourcecode to bring up the snippets menu. Choosing a 
+snippet will insert it's code at the cursor location.
+
+Although there are some build in snippets, you can get most out of them by adding your own.
+Added snippets are saved in your config folder so if you don't manually delete them they are
+never lost. To add snippets open the 'Snippet Manager'. As for the snippet code, linebreaks are
+not allowed yet, please also remember that all snippets must have unique names.
+
+
+
