@@ -28,7 +28,8 @@
 #include <String.h>
 #include <stdio.h>			// for popen()
 #include <stdlib.h>			// for EXIT_SUCCESS, WIFEXITED, etc..
-#include <fstream.h>		// for ifstream
+#include <sys/wait.h>
+#include <fstream>			// for ifstream
 #include <iostream>
 #include "colors.h"
 
