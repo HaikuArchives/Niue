@@ -593,7 +593,7 @@ ListItem::Update(BView *owner, const BFont *finfo)
 }
 
 bool TDirFilter::Filter(const entry_ref* entry, BNode* node,
-                   struct stat* stat, const char* mimetype)
+                   struct stat_beos* stat, const char* mimetype)
 {
   if (strcmp("application/x-vnd.Be-directory", mimetype) == 0)
   {

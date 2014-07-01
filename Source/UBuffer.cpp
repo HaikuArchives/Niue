@@ -38,6 +38,7 @@
 #include <Roster.h>
 #include <Application.h> //be_app
 #include <Alert.h>
+#include <Clipboard.h>
 
 	struct UndoOp
 	{

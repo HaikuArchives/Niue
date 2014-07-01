@@ -113,6 +113,8 @@ debug: all
 clean:
 	@echo Removing all Objects and Binaries
 	rm -f $(APPNAME)rsrc/$(APPNAME).rsrc
+	rm -f $(APPNAME)rsrc/Docs.zip
+	rm -f $(APPNAME)rsrc/Skeleton.zip
 	rm -f $(APPNAME).xSYM
 	rm -f $(APPNAME).xMAP
 	rm -f $(OBJDRAW)/*.o
@@ -140,7 +142,13 @@ Niue.res/Niue.r.out : Niue.res/TOKE.1.NIUE?tokens_cpp.txt Niue.res/TOKE.2.NIUE?t
 
 #rebuild those resources..
 
-$(APPNAME)rsrc/$(APPNAME).rsrc:
+Skeleton.zip:
+	@zip -r $(APPNAME)rsrc/Skeleton.zip ../Skeleton
+
+Docs.zip:
+	@zip -j $(APPNAME)rsrc/Docs.zip ../Documentation/*
+
+$(APPNAME)rsrc/$(APPNAME).rsrc: Skeleton.zip Docs.zip
 	@rm -f Niue.rsrc
 	@xres -o Niue.rsrc Niuersrc/Niuedef.rsrc
 	@xres -o Niue.rsrc Niue.rsrc -a TOKE:1:tokens_cpp.txt Niuersrc/tokens_cpp.txt

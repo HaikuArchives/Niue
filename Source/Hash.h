@@ -22,6 +22,8 @@
 
 #ifndef HASH_H
 	#define HASH_H
+	
+#include <List.h>
 
 	enum HTYPE{
 		HNORM=0,            // Normal text

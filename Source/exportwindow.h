@@ -121,7 +121,7 @@ class TDirFilter : public BRefFilter
 {
 
 public:
-  bool Filter(const entry_ref* entry, BNode* node, struct stat* stat,
+  bool Filter(const entry_ref* entry, BNode* node, struct stat_beos* stat,
               const char* mimetype);
 };
 
