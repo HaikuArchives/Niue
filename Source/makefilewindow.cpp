@@ -272,13 +272,25 @@ void makefilewindow::MessageReceived(BMessage* message)
 			BString helpstring;
 			
 			helpstring << "Sources:\n\n";
-			helpstring << "Specify the source files to use. Full paths or paths relative to the makefile can be included. All files, regardless of directory, will have their object files created in the common object directory. Note that this means this makefile will not work correctly if two source files with the same name (source.c or source.cpp) are included from different directories. Also note that spaces in folder names do not work well with this makefile.
-If you leave this blank, then all *.c *.cpp *.S *.s *.asm files in the top level local directory are automatically included.\n\n\n";
+			helpstring << "Specify the source files to use. Full paths or "
+				"paths relative to the makefile can be included. All files, "
+				"regardless of directory, will have their object files created "
+				"in the common object directory. Note that this means this "
+				"makefile will not work correctly if two source files with the "
+				"same name (source.c or source.cpp) are included from different "
+				"directories. Also note that spaces in folder names do not work "
+				"well with this makefile."
+				"If you leave this blank, then all *.c *.cpp *.S *.s *.asm files "
+				"in the top level local directory are automatically included.\n\n\n";
 			
 			helpstring << "Libraries:\n\n";
-			helpstring <<"Specify additional libraries to link against. There are two acceptable forms of library specifications:\n
-- If your library follows the naming pattern of: libXXX.so or libXXX.a you can simply specify XXX library: libbe.so entry: be \n
-- If your library does not follow the standard library naming scheme you need to specify the path to the library and it's name. Library: my_lib.a entry: my_lib.a or path/my_lib.a\n\n";
+			helpstring <<"Specify additional libraries to link against. There "
+				"are two acceptable forms of library specifications:\n"
+				"- If your library follows the naming pattern of: libXXX.so "
+				"or libXXX.a you can simply specify XXX library: libbe.so entry: be \n"
+				"- If your library does not follow the standard library naming "
+				"scheme you need to specify the path to the library and it's "
+				"name. Library: my_lib.a entry: my_lib.a or path/my_lib.a\n\n";
 			(new BAlert("Niue - Build Rules", helpstring.String(), "Close", 0, 0, B_WIDTH_AS_USUAL, B_INFO_ALERT))->Go();
 		}
 		break;

@@ -23,6 +23,7 @@
 
 #include <malloc.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include <Region.h>
@@ -164,19 +165,19 @@ void  SMap::MyFillRect(BRect rect){
 	for (int y=0;y<y1;y++){
 		char *stt=dest;
 		char *fin=dest+x1;
-		if ( (((int)stt)&4) && (stt+4<=fin)){
+		if ( ((atoi(stt))&4) && (stt+4<=fin)){
 			*(int32*)stt=fci;
 			stt+=4;
 		}
-		if ( (((int)fin)&4) && (stt<=fin-4)){
+		if ( ((atoi(fin))&4) && (stt<=fin-4)){
 			fin-=4;
 			*(int32*)fin=fci;
 		}
 
-		while ( (((int)stt)&3) && (stt<fin)){
+		while ( ((atoi(stt))&3) && (stt<fin)){
 			*stt++=fci;
 		}
-		while ((((int)fin)&3) && (stt<fin)){
+		while (((atoi(fin))&3) && (stt<fin)){
 			*--fin=fci;
 		}
 		while (stt<fin){

@@ -990,7 +990,7 @@ BMapView::SeekMouse()
 {
 	BPoint  where;
 	ulong   but=0;
-	GetMouse(&where,&but,FALSE);
+	GetMouse(&where, NULL);
 	where.x+=tlx;where.y+=tly;
 	if (lastmouse!=where)
 	{

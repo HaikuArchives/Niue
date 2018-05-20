@@ -103,7 +103,7 @@
 			CList *alist;
 			friend class nplace;
 			friend class ntree;
-			friend void Balance(ntree**,int);
+			friend void Balance(int);
 	};
 
 //  #define MAXNTN 8
