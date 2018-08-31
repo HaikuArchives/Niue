@@ -18,7 +18,7 @@ And everyone working on, or supporting Haiku. Because Niue owes so much to those
 to be sure that future developers can always rely on the codebase of Niue and therefor the Niue 
 sources are always available by request.
 
-TODO List
+## TODO List
 - Extend visual designer (more elements)
 - Haiku layout-management in VD
 - Undo in VD
@@ -38,4 +38,5 @@ TODO List
 - Review all documentation
 
 Niue was developed by: Tako Lansbergen (a.ka. 0033)
+
 Now hosted on Haiku Archives
