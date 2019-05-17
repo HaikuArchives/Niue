@@ -234,7 +234,7 @@ void makefilewindow::WriteMakefile()
 	makestring << "\nOPTIMIZE := " << opt;
 	makestring << "\nRSRCS := " << txtRes->Text();
 	makestring << "\n\n" << txtAdv->Text();
-	makestring << "\n\ninclude /boot/develop/etc/makefile-engine\n";
+	makestring << "\n\ninclude /boot/system/develop/etc/makefile-engine\n";
 	
 	BPath makepath;
 	makepath.SetTo(&entry);

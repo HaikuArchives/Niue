@@ -3,7 +3,7 @@
 NAME := YourApp
 TYPE := APP
 SRCS := 	yourapp.cpp yourappview.cpp yourappwindow.cpp
-LIBS := 	be
+LIBS := 	be stdc++
 OPTIMIZE := FULL
 RSRCS := yourapp.rsrc
 
@@ -119,6 +119,6 @@ EXTRA_BUILD_STEPS :=
 #	project that may get rebuilt, specify the full path to them here.
 EXTRA_DEPS := 
 
-include /boot/develop/etc/makefile-engine
+include /boot/system/develop/etc/makefile-engine
 
 

@@ -145,7 +145,7 @@ MenIt WinMenu[] = {	{"View",0},
 								
 
 // thread callable
-long
+int32
 MyDraw(void *dummy)
 {
 	BMapView *vv = (BMapView *)dummy;
@@ -287,7 +287,7 @@ NiueWindow::~NiueWindow()
 	
 	if (fDrawThread)
 	{
-		long temp;
+		status_t temp;
 		wait_for_thread(fDrawThread,&temp);
 		fDrawThread = 0;
 	}
@@ -1804,7 +1804,7 @@ StatusView::MyNav(STextView *src,int dir)
 }
 
 
-STextView::STextView(BRect frame, const char *name, uint32 resizeMask, int32 msg)
+STextView::STextView(BRect frame, const char *name, uint32 resizeMask, long msg)
 	:	BTextView(frame,name,frame,resizeMask,B_WILL_DRAW|B_NAVIGABLE)
 {
 	mymsg = msg;

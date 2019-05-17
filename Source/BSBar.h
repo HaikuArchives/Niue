@@ -29,7 +29,7 @@ class CList;
 class BSBar : public BScrollBar
 {
 public:
-					BSBar(BRect frame, const char *name, port_id drawport, int32 min, int32 max,
+					BSBar(BRect frame, const char *name, port_id drawport, long min, long max,
 						orientation posture);
 	virtual			~BSBar();
 	virtual	void	ValueChanged(float nv);
