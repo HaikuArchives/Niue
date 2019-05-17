@@ -55,7 +55,7 @@ public:
 	virtual void	DoRightMenu(BPoint point);
 			bool	HasSelection();
 
-			int32           DrawThread();
+			long           DrawThread();
 
 			SMap        *PrepareBlit(BRect dest, BRect *src);
 

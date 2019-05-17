@@ -22,7 +22,7 @@
 
 
 #include <string.h> //memset
-#include <ByteOrder.h> //htonl
+#include <netinet/in.h> //htonl
 
 #ifndef _FFONT_H
 #include "FFont.h"

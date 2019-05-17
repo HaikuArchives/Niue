@@ -39,6 +39,7 @@
 #include <Application.h> //be_app
 #include <Alert.h>
 #include <Clipboard.h>
+#include <SupportDefs.h>
 
 	struct UndoOp
 	{
@@ -285,7 +286,7 @@ int32 Buff::AddChar(int32 cn,const char *s,int32 cnt,int32 dir){
 	return ll;
 }
 
-int32 Buff::AddCharReal(long cn,const char *s,long cnt)
+int32 Buff::AddCharReal(int32 cn,const char *s,int32 cnt)
 {
 	long length = cnt;	//save the length to decide whether we should do codecompletion
 	
@@ -974,7 +975,7 @@ char *MyMimeType(int idx){
 
 int32 Buff::Paste(BMessage *msg){
 	char    *data=NULL;
-	int32    ll=0;
+	long    ll=0;
 
 	//    msg->PrintToStream();
 	status_t rr=msg->FindData("text/plain",B_MIME_TYPE,(const void**)&data,&ll);

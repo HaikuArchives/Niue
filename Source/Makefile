@@ -64,13 +64,13 @@ ifeq ($(DEBUG),TRUE)
 	OBJDRAW     = obj.x86
 	X86_EXTRAS         =
 	PPC_EXTRAS         =
-	X86_LD          = cc -lbe -lroot -ltracker -ltranslation
+	X86_LD          = cc -lbe -lroot -ltracker -ltranslation -lstdc++
 	PPC_LD          = 
 else
 	OBJDRAW     = obj.x86
 	X86_EXTRAS    = -O2 -D RELBUILD
 	PPC_EXTRAS    = -O2 -d RELBUILD
-	X86_LD          = cc -lbe -lroot -ltracker -ltranslation
+	X86_LD          = cc -lbe -lroot -ltracker -ltranslation -lstdc++
 	PPC_LD          = mwld -map $(APPNAME).xMAP
 endif
 
@@ -82,10 +82,10 @@ LD                     =$($(PLATFORM)_LD)
 OPTIONS           = $($(PLATFORM)_OPTIONS)
 EXTRAS             = $($(PLATFORM)_EXTRAS)
 
-INCLUDES        = -I/boot/develop/headers
+INCLUDES        = -I/boot/system/develop/headers
 CC              = cc
 SHELL           = /bin/sh
-CFLAGS          = $(OPTIONS) $(EXTRAS) $(INCLUDES)
+CFLAGS          = $(OPTIONS) $(EXTRAS) $(INCLUDES) -std=c++03
 
 PPC_HEADERS   =$(CC) $(CFLAGS) -make
 X86_HEADERS   =$(CC) $(CFLAGS) -MM
@@ -108,7 +108,7 @@ run: all
 	$(APPNAME)
 
 debug: all
-	/boot/apps/Metrowerks/debugger/MWDebug-Be $(APPNAME)  &
+	/boot/system/apps/Debugger $(APPNAME)  &
 
 clean:
 	@echo Removing all Objects and Binaries
@@ -163,8 +163,8 @@ $(APPNAME)rsrc/$(APPNAME).rsrc: Skeleton.zip Docs.zip
 checkfolder: $(OBJDRAW)/
 
 #create a new folder
-$(OBJDRAW)/:
-	mkdir "$(OBJDRAW)"
+$(OBJDRAW):
+	$(shell mkdir -p $(OBJDRAW))
 
 ifeq ($(AUTODEPEND),TRUE)
 $(OBJDRAW)/%.d: %.cpp

@@ -112,7 +112,7 @@ main(int a,char **b)
 
 
 NiueApplication::NiueApplication()
-	:	BApplication("application/x-vnd.Niue5")
+	:	BApplication("application/x-vnd.Niue4")
 {
 	new BufList();
 
