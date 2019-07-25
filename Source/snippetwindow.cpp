@@ -11,17 +11,17 @@ snippetwindow::snippetwindow() :
 {
 
 	SetSizeLimits(515,30000,100,30000);
-	
+
 	// define objects
 	vwMain = new ssnippetview(BRect(0,0,srect.Width(),srect.Height()), "vwMain");
-	
+
 	// set objects
 	vwMain->SetViewColor(ui_color(B_PANEL_BACKGROUND_COLOR));
-	
+
 	// add objects
 	AddChild(vwMain);
 
-	//internal setting
+	// internal setting
 	saved = true;
 	close = false;
 }
@@ -30,12 +30,10 @@ snippetwindow::snippetwindow() :
 bool snippetwindow::QuitRequested()
 {
 	PostMessage(S_ACTION_CLOSE_MSG);
-//	return BWindow::QuitRequested();
 }
 
 void snippetwindow::MessageReceived(BMessage* message)
 {
-	
 	switch(message->what)
 	{
 		case S_ACTION_CLOSE_MSG:
@@ -48,33 +46,32 @@ void snippetwindow::MessageReceived(BMessage* message)
 			else
 			{
 				BAlert *savealert=new BAlert("Quitting Alert", "Do you want to save changes before quitting?", "Cancel", "Don't save", "Save and Close");
-	
+
 				int32 res=savealert->Go();
 				switch(res)
 				{
 					case 1:
 						Close();
-						break;		
+						break;
 					case 2:
 						close = true;
-						//fall trhrough to S_ACTION_SAVE			
+						//fall trhrough to S_ACTION_SAVE
 				}
 			}
 		}
 
 		case S_ACTION_SAVE_MSG:
 		{
-			
 			BPath prefspath;
-			
-			//find prefsfile
+
+			// find prefsfile
 			find_directory(B_USER_SETTINGS_DIRECTORY, &prefspath, false);
 			prefspath.Append("Niue/niue_snippets");
-						
-			//create file, override when it already exists
+
+			// create file, override when it already exists
 			BFile snippetsfile;
-			snippetsfile.SetTo(prefspath.Path(), B_WRITE_ONLY | B_CREATE_FILE);  //B_OPEN_AT_END-> not were rewriting the whole file
-			
+			snippetsfile.SetTo(prefspath.Path(), B_WRITE_ONLY | B_CREATE_FILE);
+
 			BMessage msg('SNIP');
 
 			for(int i=0; i < vwMain->lstSnippets->CountItems(); i++)
@@ -83,23 +80,18 @@ void snippetwindow::MessageReceived(BMessage* message)
 				msg.AddString(item->sname.String(), item->stext);
 			}
 
-//			msg.AddString(txtName->Text(), txtCode->Text());
 			msg.Flatten(&snippetsfile);
-			
-			//close
-			snippetsfile.Unset();
 
+			// close
+			snippetsfile.Unset();
 			saved = true;
 
 			if(close)
 			{
 				Close();
 			}
-
 		}
 		break;
-
-		
 
 		case S_ACTION_NEW_MSG:
 		{
@@ -107,21 +99,20 @@ void snippetwindow::MessageReceived(BMessage* message)
 			vwMain->NewSnippet();
 		}
 		break;
-		
 
 		case S_ACTION_REMOVE_MSG:
 		{
 			int32 index = vwMain->lstSnippets->CurrentSelection();
 			vwMain->lstSnippets->RemoveItem(index);
-			
-			//be automatically shifts the indices so now we can:
+
+			// be automatically shifts the indices so now we can:
 			if(index > 0)
 			{
 				vwMain->lstSnippets->Select(index-1);
 			}
 			else
 			{
-				vwMain->lstSnippets->Select(index);	
+				vwMain->lstSnippets->Select(index);
 			}
 			saved = false;
 
@@ -148,23 +139,20 @@ void snippetwindow::MessageReceived(BMessage* message)
 								break;
 							}
 						}
-						dynamic_cast<slistitem *>(vwMain->lstSnippets->ItemAt(vwMain->lstSnippets->CurrentSelection()))->sname = cont;			
+						dynamic_cast<slistitem *>(vwMain->lstSnippets->ItemAt(vwMain->lstSnippets->CurrentSelection()))->sname = cont;
 					}
 				}
 				else
 				{
 					if(message->FindString("cont", &cont) == B_OK)
 					{
-						dynamic_cast<slistitem *>(vwMain->lstSnippets->ItemAt(vwMain->lstSnippets->CurrentSelection()))->stext = cont;			
+						dynamic_cast<slistitem *>(vwMain->lstSnippets->ItemAt(vwMain->lstSnippets->CurrentSelection()))->stext = cont;
 					}
-					
 				}
 			}
 
-//			vwMain->BuildList();
 			saved = false;
 		}
 		break;
 	}
 }
-
