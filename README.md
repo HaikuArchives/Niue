@@ -1,4 +1,6 @@
 # Niue
+![screenshot](Niue.png)
+
 Niue is a basic, easy to use but powerful development environment. Or, Niue is an application 
 for BeOS/Haiku which makes it easy to develop applications for BeOS/Haiku. It comes with a 
 syntax styled code editor and handy features to build and export your projects. Besides that Niue 
