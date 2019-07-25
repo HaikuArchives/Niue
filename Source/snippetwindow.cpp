@@ -30,6 +30,7 @@ snippetwindow::snippetwindow() :
 bool snippetwindow::QuitRequested()
 {
 	PostMessage(S_ACTION_CLOSE_MSG);
+	return false;
 }
 
 void snippetwindow::MessageReceived(BMessage* message)
